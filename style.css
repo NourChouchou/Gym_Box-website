@@ -1,0 +1,385 @@
+:root{
+    --grey:#4080bf;
+    --blue:#9195a7;
+}
+
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: all .2 linear;
+text-transform: capitalize;
+outline: none;
+text-decoration: none;
+}
+
+*::selection{
+    background: var(--grey);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+
+header{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: fixed;
+top: 0; left: 0;
+z-index: 1000;
+padding: 2rem 3rem ;
+}
+.home{
+    min-height: 100vh;
+    background: url(./Img/im3.webp)  no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    clip-path: polygon(0 0,100% 0,100% 85% ,50% 100% ,0 85%);
+} 
+
+ ul{
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+li{
+    margin: 1.2rem;
+}
+li a{
+    color: #000;
+    font-size: 2rem;
+}
+li a.active,
+li a:hover{
+    color: var(--grey);
+}
+
+header #menu{
+    font-size: 1rem;
+    color: var(--grey);
+    display: none;
+    cursor: pointer;
+}
+.home h1{
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0.3rem .5rem #000;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    cursor: pointer;
+    border: .2rem solid var(--grey);
+    color: var(--grey);
+    background: none;
+    padding: .5rem 3rem;
+    margin-top: 1rem ;
+    position: relative;
+    z-index: 0;
+    font-size: 2rem;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    width: 100%;
+    background:var(--blue) ;
+    z-index: -1;
+    clip-path: circle(0% at 0% 0%);
+    transition: .3%;
+}
+
+.btn:hover::before{
+    clip-path: circle(100%);
+}
+.btn:hover{
+    color: #03324b;
+}
+.home.bnt{
+    box-shadow: 0.3rem .5rem #000; 
+    color: #fff; 
+}
+.service{
+    min-height: 100vh;
+    text-align: center;
+}
+
+.heading{
+    display: inline-block;
+    color: #333;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    padding-top: 8rem;
+    font-size: 3rem;
+    border-bottom: .2rem solid var(--grey);
+}
+
+/* Reset and base styles */
+
+
+/* Header styles */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent; /* Initial background color */
+    padding: 20px 50px; /* Adjust padding as needed */
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+header .logo {
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+header .navbar ul li {
+    margin: 0 20px; /* Adjust spacing between menu items */
+}
+
+header .navbar ul li a {
+    color: #000;
+    font-size: 2.1rem; /* Adjust font size */
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+    color: #4080bf; /* Adjust hover/active color */
+}
+
+/* Navbar scrolled styles */
+header.scrolled {
+    background-color: #fff; /* Change background color on scroll */
+    padding: 10px 50px; /* Adjust padding on scroll */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow on scroll */
+}
+.service .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.service .box-container .box{
+    height: 23rem;
+    width: 35rem;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.service .box-container .box img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.trainer{
+    min-height: 100vh;
+    text-align: center;
+    background: #5e5e5e;
+}
+.trainer .heading{
+    color: #fff;
+}
+.trainer .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.trainer .box-container .box{
+    height: 40rem;
+    width: 27rem;
+    margin: 1.5rem 1rem;
+    border: .5rem solid --blue;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .3rem .5rem #000;
+  
+}
+.trainer .box-container .box img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.plan{
+    min-height: 100vh;
+    text-align: center;
+    background: #eee;
+}
+
+.plan .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.plan .box-container .box{
+    background: #fff;
+    margin: 2rem;
+    width: 30rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+.plan .box-container .box:hover{
+    transform: scale(1.04);
+}
+.plan .box-container .box .title{
+    font-size:2.5rem ;
+    background: var(--grey);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.plan .box-container .box .price{
+    font-size:4rem ;
+    color: #333;
+    padding-top: 1rem ;
+}
+
+.plan .box-container .box .month{
+    font-size:2rem ;
+    color: #666;
+}
+.plan .box-container .box .btn{
+   margin-bottom: 3rem;
+}
+
+
+.register{
+    min-height: 90vh;
+    text-align: center;
+    background: #06175b;
+    padding-bottom: 3rem;
+}
+.register .heading{
+    color: #fff;
+}
+
+.register form{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.register form .inputbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.register form .inputbox input,textarea{
+
+    height: 4rem;
+    width: 49%;
+    background: #2b2929;
+    color: #fff;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: none;
+}
+.register form textarea{
+    height: 20rem;
+    resize: none;
+    padding: 1rem;
+    width: 100%;
+}
+
+.register form .btn:hover{
+background: var(--grey);
+color: #fff;
+}
+.register form .inputbox input:focus,textarea:focus{
+    background: #222;
+}
+
+.footer{
+    color:var(--grey) ;
+background: white;
+text-align: center;
+padding: 2rem 1rem;
+font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+html{
+    font-size: 55%;
+}
+header #menu{
+    display: block;
+  
+}
+header .navbar{
+    position: fixed;
+    top: -100rem;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+bottom: .1rem solid rgba(0,0,0,.3);
+}
+header.navbar ul{
+    flex-flow: column;
+    padding: 2rem 0;
+}
+header .navbar ul li{
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+header .navbar ul li a{
+    font-size: 2.5rem;
+    color: #333;
+    display: block;
+}
+
+}
+
